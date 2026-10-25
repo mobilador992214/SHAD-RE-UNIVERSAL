@@ -40,3 +40,9 @@ jobs:
       name: SHADORE-debug-APK
       path: '**/build/outputs/apk/debug/*.apk'
       if-no-files-found: error
+   
+  - name: Upload APK
+    uses: actions/upload-artifact@v4
+    with:
+      name: APK
+      path: app/build/outputs/apk/**/*.apk
